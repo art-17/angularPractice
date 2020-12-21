@@ -1,0 +1,27 @@
+<p>products List</p>
+<div class="d-flex">
+    <div class="ml-auto"><label>Filter: </label></label></div>
+</div>
+<table class="table ">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Fruit ID</th>
+            <th>Fruit Name</th>
+            <th>Fruit Size</th>
+            <th>Fruit Color</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr [ngClass]="{'bgRed':fruit.fruitColor == 'Red', 'bgGreen':fruit.fruitColor == 'Green', 'bgYellow':fruit.fruitColor == 'Yellow', 'bgBlue':fruit.fruitColor == 'Blue'" 
+        *ngFor="let fruit of fruits; let i=index"> -->
+        <tr [ngClass]="getClass(fruit)" *ngFor="let fruit of fruits; let i=index">
+        <!-- <tr *ngFor="let fruit of fruits; let i=index"> -->
+            <td scope="row">{{i+1}}</td>
+            <td>{{fruit.fruitId}}</td>
+            <td>{{fruit.fruitName}}</td>
+            <td>{{fruit.fruitSize}}</td>
+            <td>{{fruit.fruitColor}}</td>
+        </tr>
+    </tbody>
+</table>
